@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #902934;
+  --second-color: #b62e3b;
+  --third-color: #7e212b;
+  --fourth-color:  #e3e3e3;
+  --fifth-color: #fff;
+}
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  color: var(--primary-color);
+  background-color: var(--fifth-color);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0 auto; 
+  flex-direction: column;
+}
+
+#wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+}
+
+.titulo {
+  margin-bottom: 8px; 
+  padding: 16px; 
+  text-align: center;
+  font-size: 1.2em; 
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sub-titulo {
+  background-color: var(--primary-color);
+  color: var(--fifth-color);
+  padding: 8px 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.sub-titulo i {
+  color: var(--third-color);
+}
+
+.sub-titulo h3 {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 4px;  
+  font-weight: normal;
+}
+
+.massas {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px 0;
+}
+
+.input-radio, .input-check {
+  display: none;
+}
+
+.massas > label {
+  padding: 8px 24px;
+  cursor: pointer;
+}
+
+.-massa + label::before, .-tamanho + label::after {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-color: var(--fourth-color);
+  border: 4px solid var(--fourth-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--second-color);
+  vertical-align: middle;
+}
+
+.-massa + label::before {
+  margin-top: -3px;
+  margin-right: 10px;
+}
+
+.-massa:checked + label::before, .-tamanho:checked + label::after {
+  border: 4px solid var(--second-color);
+}
+
+.tamanhos, .adicionais {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.-label > label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+.input-check + label::after {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  font: 16px/1em sans-serif;
+  background-color: var(--fourth-color);
+  border: 1px solid var(--second-color);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.-recheio + label::after {
+  content: "\00a0";
+}
+
+.-recheio:checked + label::after {
+  content: "\2713";    
+  font-weight: bold;
+  background-color: var(--second-color);
+  color: var(--fifth-color);
+}
+
+.-adicional + label::after {
+  content: "\002b";
+  font-weight: bold;
+  background-color: var(--second-color);
+  color: var(--fifth-color);
+}
+
+.-adicional:checked + label::after {
+  content: "\002b";
+  opacity: 0.2;
+}

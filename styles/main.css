@@ -52,7 +52,8 @@ body {
 .sub-titulo h3 {
   font-size: 12px;
   opacity: 0.8;
-  margin-top: 4px;  
+  margin-top: 4px;
+  margin-left: 14px;
   font-weight: normal;
 }
 
@@ -110,7 +111,7 @@ body {
   display: inline-block;
   height: 16px;
   width: 16px;
-  font: 16px/1em sans-serif;
+  font: 14px/1em sans-serif;
   background-color: var(--fourth-color);
   border: 1px solid var(--second-color);
   border-radius: 4px;
@@ -119,7 +120,7 @@ body {
 }
 
 .-recheio + label::after {
-  content: "\00a0";
+  content: "\00a0";  
 }
 
 .-recheio:checked + label::after {
@@ -159,7 +160,7 @@ body {
 }
 
 .observacoes > textarea {
-  margin: 8px 0 16px 16px;
+  margin: 0 0 8px 16px;
   border: 1px solid rgba(128, 128, 128, 0.7);
   border-radius: 4px;
   padding: 8px;

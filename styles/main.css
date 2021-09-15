@@ -6,6 +6,10 @@
   --fifth-color: #fff;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 html, body {
   font-family: 'Lato', sans-serif;
   color: var(--primary-color);
@@ -128,6 +132,10 @@ body {
   font-weight: bold;
   background-color: var(--second-color);
   color: var(--fifth-color);
+}
+
+.-recheio:disabled + label::after {
+  opacity: 0.4;
 }
 
 .-adicional + label::after {

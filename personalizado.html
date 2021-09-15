@@ -23,7 +23,7 @@
     <main role="main" class="principal">
       <h1 class="titulo">Bolos Personalizados Decorados com Chantininho (Quilo)</h1>
 
-      <div class="tp-massas">
+      <div class="tp-massas" id="tp-massas">
         <div class="sub-titulo">        
           <h2>
             <i class="fas fa-chevron-right" ></i>
@@ -38,8 +38,8 @@
         </div>
       </div>
 
-      <div class="tp-tamanhos">
-        <div class="sub-titulo">
+      <div class="tp-tamanhos" id="tp-tamanhos">
+        <div class="sub-titulo" >
           <h2>
             <i class="fas fa-chevron-right" ></i>
             Escolha o tamanho do bolo
@@ -47,7 +47,7 @@
         </div>
         <div class="tamanhos">
           <div class="tamanho -label">
-            <input type="radio" class="input-radio -tamanho" name="tamanho" id="11cm">
+            <input type="radio" class="input-radio -tamanho" value="80" name="tamanho" id="11cm">
             <label for="11cm">
               <div class="descricao">
                 <p>11cm de diâmetro (1,2kg aprox.)</p>
@@ -56,7 +56,7 @@
             </label>
           </div>
           <div class="tamanho -label">
-            <input type="radio" class="input-radio -tamanho" name="tamanho" id="15cm">
+            <input type="radio" class="input-radio -tamanho" value="132" name="tamanho" id="15cm">
             <label for="15cm">
               <div class="descricao">
                 <p>15cm de diâmetro (2,0kg aprox.)</p>
@@ -65,7 +65,7 @@
             </label>
           </div>
           <div class="tamanho -label">
-            <input type="radio" class="input-radio -tamanho" name="tamanho" id="17cm">
+            <input type="radio" class="input-radio -tamanho" value="164" name="tamanho" id="17cm">
             <label for="17cm">
               <div class="descricao">
                 <p>17cm de diâmetro (2,5kg aprox.)</p>
@@ -74,7 +74,7 @@
             </label>
           </div>
           <div class="tamanho -label">
-            <input type="radio" class="input-radio -tamanho" name="tamanho" id="20cm">
+            <input type="radio" class="input-radio -tamanho" value="224" name="tamanho" id="20cm">
             <label for="20cm">
               <div class="descricao">
                 <p>20cm de diâmetro (3,5kg aprox.)</p>
@@ -85,7 +85,7 @@
         </div>
       </div>
 
-      <div class="tp-recheios">
+      <div class="tp-recheios" id="tp-recheios">
         <div class="sub-titulo">
           <h2>
             <i class="fas fa-chevron-right" ></i>
@@ -94,22 +94,22 @@
           <h3>Escolha até 2 opções</h3>
         </div>
         <div class="recheios -label">
-          <input type="checkbox" class="input-check -recheio" id="bicho-de-pe">
+          <input type="checkbox" class="input-check -recheio" name="recheio" id="bicho-de-pe">
           <label for="bicho-de-pe">Bicho de Pé</label>
-          <input type="checkbox" class="input-check -recheio" id="brigadeiro-branco">
+          <input type="checkbox" class="input-check -recheio" name="recheio" id="brigadeiro-branco">
           <label for="brigadeiro-branco">Brigadeiro Branco</label>
-          <input type="checkbox" class="input-check -recheio" id="brigadeiro-de-ninho">
+          <input type="checkbox" class="input-check -recheio" name="recheio" id="brigadeiro-de-ninho">
           <label for="brigadeiro-de-ninho">Brigadeiro de Ninho</label>
-          <input type="checkbox" class="input-check -recheio" id="brigadeiro-tradicional">
+          <input type="checkbox" class="input-check -recheio" name="recheio" id="brigadeiro-tradicional">
           <label for="brigadeiro-tradicional">Brigadeiro Tradicional</label>        
-          <input type="checkbox" class="input-check -recheio" id="doce-de-leite">
+          <input type="checkbox" class="input-check -recheio" name="recheio" id="doce-de-leite">
           <label for="doce-de-leite">Doce de Leite</label>
-          <input type="checkbox" class="input-check -recheio" id="prestigio">
+          <input type="checkbox" class="input-check -recheio" name="recheio" id="prestigio">
           <label for="prestigio">Prestígio</label>
         </div>
       </div>
 
-      <div class="tp-adicionais">
+      <div class="tp-adicionais" id="tp-adicionais">
         <div class="sub-titulo">
           <h2>
             <i class="fas fa-chevron-right" ></i>
@@ -118,7 +118,7 @@
         </div>
         <div class="adicionais">
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="abacaxi">
+            <input type="checkbox" class="input-check -adicional" value="8" name="adicional" id="abacaxi">
             <label for="abacaxi">
               <div class="descricao">
                 <p>Abacaxi</p>
@@ -127,7 +127,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="ameixa">
+            <input type="checkbox" class="input-check -adicional" value="6" name="adicional" id="ameixa">
             <label for="ameixa">
               <div class="descricao">
                 <p>Ameixa</p>
@@ -136,7 +136,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="cereja">
+            <input type="checkbox" class="input-check -adicional" value="12" name="adicional" id="cereja">
             <label for="cereja">
               <div class="descricao">
                 <p>Cereja</p>
@@ -145,7 +145,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="chocolate-branco-picado">
+            <input type="checkbox" class="input-check -adicional" value="14" name="adicional" id="chocolate-branco-picado">
             <label for="chocolate-branco-picado">
               <div class="descricao">
                 <p>Chocolate branco picado</p>
@@ -154,7 +154,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="chocolate-picado">
+            <input type="checkbox" class="input-check -adicional" value="12" name="adicional" id="chocolate-picado">
             <label for="chocolate-picado">
               <div class="descricao">
                 <p>Chocolate picado</p>
@@ -163,7 +163,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="gel-frutas-vermelhas">
+            <input type="checkbox" class="input-check -adicional" value="20" name="adicional" id="gel-frutas-vermelhas">
             <label for="gel-frutas-vermelhas">
               <div class="descricao">
                 <p>Geleia frutas vermelhas</p>
@@ -172,7 +172,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="gel-morango">
+            <input type="checkbox" class="input-check -adicional" value="10" name="adicional" id="gel-morango">
             <label for="gel-morango">
               <div class="descricao">
                 <p>Geleia de morango</p>
@@ -181,7 +181,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="morango">
+            <input type="checkbox" class="input-check -adicional" value="8" name="adicional" id="morango">
             <label for="morango">
               <div class="descricao">
                 <p>Morango</p>
@@ -190,7 +190,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="nozes">
+            <input type="checkbox" class="input-check -adicional" value="12" name="adicional" id="nozes">
             <label for="nozes">
               <div class="descricao">
                 <p>Nozes</p>
@@ -199,7 +199,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="nutella">
+            <input type="checkbox" class="input-check -adicional" value="20" name="adicional" id="nutella">
             <label for="nutella">
               <div class="descricao">
                 <p>Nutella</p>
@@ -208,7 +208,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="oreo">
+            <input type="checkbox" class="input-check -adicional" value="10" name="adicional" id="oreo">
             <label for="oreo">
               <div class="descricao">
                 <p>Oreo</p>
@@ -217,7 +217,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="pacoca">
+            <input type="checkbox" class="input-check -adicional" value="10" name="adicional" id="pacoca">
             <label for="pacoca">
               <div class="descricao">
                 <p>Paçoca</p>
@@ -226,7 +226,7 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" id="sonho-valsa">
+            <input type="checkbox" class="input-check -adicional" value="10" name="adicional" id="sonho-valsa">
             <label for="sonho-valsa">
               <div class="descricao">
                 <p>Sonho de valsa</p>
@@ -268,7 +268,7 @@
       </p>
       <p class="informacao atencao">
         <i class="fas fa-exclamation-triangle"></i>
-        Alérgicos possui: glúten, soja, leite e derivados.
+        Alérgicos: possui glúten, soja, leite e derivados.
       </p>
     </section>
 
@@ -291,9 +291,10 @@
   <footer>
     <button>
       <img src="/assets/WhatsApp.svg">
-      <span>R$000,00</span>
+      <span class="preco-total">R$000,00</span>
     </button>
   </footer>
-    
+  
+  <script src="/script/app.js"></script>
 </body>
 </html>

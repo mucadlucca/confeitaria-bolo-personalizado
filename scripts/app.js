@@ -1,15 +1,13 @@
-let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-
 const inputMassa = document.querySelectorAll("input[name='massa']")
 
 for (i=0; i < inputMassa.length; i++) {
-  inputMassa[i].addEventListener(touchEvent, nextPropertie)
+  inputMassa[i].addEventListener('click', nextPropertie)
 }
 
 const inputTamanho = document.querySelectorAll("input[name='tamanho']")
 
 for (i=0; i < inputTamanho.length; i++) {
-  inputTamanho[i].addEventListener(touchEvent, nextPropertie)
+  inputTamanho[i].addEventListener('click', nextPropertie)
 }
 
 function nextPropertie(e) {
@@ -17,18 +15,18 @@ function nextPropertie(e) {
 
   switch (currentStage){
     case 'massa':
-      window.location.href = '#tp-tamanhos';
+      window.location = '#tp-tamanhos';
       break;
     case 'tamanho':
       priceUpdate()
-      window.location.href = '#tp-recheios';      
+      window.location = '#tp-recheios';      
   }    
 }
 
 const inputRecheio = document.querySelectorAll("input[name='recheio']");
 
 for (var i = 0; i < inputRecheio.length; i++) {
-  inputRecheio[i].addEventListener(touchEvent, countInputRecheioDisable);
+  inputRecheio[i].addEventListener('click', countInputRecheioDisable);
 }
 
 function countInputRecheioDisable() {
@@ -39,7 +37,7 @@ function countInputRecheioDisable() {
 
   if (inputRecheioChecked.length === 2) {
     checkboxDisable(unCheckbox)
-    window.location.href = '#tp-adicionais';    
+    window.location = '#tp-adicionais';    
   } else {
     checkboxEnable(unCheckbox)  
   }  
@@ -47,14 +45,12 @@ function countInputRecheioDisable() {
 
 function checkboxDisable(unCheckbox) {
   unCheckbox.forEach((checkbox) => {
-    // checkbox.disabled = true
     checkbox.setAttribute("disabled", "")
   })
 }
 
 function checkboxEnable(unCheckbox) {
   unCheckbox.forEach((checkbox) => {
-    // checkbox.disabled = false
     checkbox.removeAttribute("disabled")
   })
 }
@@ -82,7 +78,7 @@ function checkBoxCompare(checkbox, checkboxChecked) {
 const inputAdicional = document.querySelectorAll("input[name='adicional']");
 
 for (var i = 0; i < inputAdicional.length; i++) {
-  inputAdicional[i].addEventListener(touchEvent, priceUpdate);
+  inputAdicional[i].addEventListener('click', priceUpdate);
 }
 
 function priceUpdate(){

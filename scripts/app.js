@@ -1,26 +1,26 @@
 const inputMassa = document.querySelectorAll("input[name='massa']")
 
-for (i=0; i < inputMassa.length; i++) {
+for (i = 0; i < inputMassa.length; i++) {
   inputMassa[i].addEventListener('click', nextPropertie)
 }
 
 const inputTamanho = document.querySelectorAll("input[name='tamanho']")
 
-for (i=0; i < inputTamanho.length; i++) {
+for (i = 0; i < inputTamanho.length; i++) {
   inputTamanho[i].addEventListener('click', nextPropertie)
 }
 
 function nextPropertie(e) {
   let currentStage = e.target.name
 
-  switch (currentStage){
+  switch (currentStage) {
     case 'massa':
       window.location = '#tp-tamanhos';
       break;
     case 'tamanho':
       priceUpdate()
-      window.location = '#tp-recheios';      
-  }    
+      window.location = '#tp-recheios';
+  }
 }
 
 const inputRecheio = document.querySelectorAll("input[name='recheio']");
@@ -30,17 +30,16 @@ for (var i = 0; i < inputRecheio.length; i++) {
 }
 
 function countInputRecheioDisable() {
-  priceUpdate()
   const inputRecheioChecked = document.querySelectorAll("input[name='recheio']:checked");
-  
+
   const unCheckbox = findUncheckedBoxes(inputRecheio, inputRecheioChecked);
 
   if (inputRecheioChecked.length === 2) {
     checkboxDisable(unCheckbox)
-    window.location = '#tp-adicionais';    
+    window.location = '#tp-adicionais';
   } else {
-    checkboxEnable(unCheckbox)  
-  }  
+    checkboxEnable(unCheckbox)
+  }
 }
 
 function checkboxDisable(unCheckbox) {
@@ -62,7 +61,7 @@ function findUncheckedBoxes(allCheckboxes, checkedInputs) {
     checkedInputs.forEach((checkboxChecked) => {
       if (checkBoxCompare(checkbox, checkboxChecked)) {
         found = true;
-      }  
+      }
     });
     if (!found) {
       unCheckedBoxes.push(checkbox);
@@ -81,8 +80,19 @@ for (var i = 0; i < inputAdicional.length; i++) {
   inputAdicional[i].addEventListener('click', priceUpdate);
 }
 
-function priceUpdate(){
+function priceUpdate() {
   const totalPrice = document.querySelector('.preco-total')
   const tamanho = document.querySelector("input[name='tamanho']:checked")
   const adicional = document.querySelectorAll("input[name='adicional']:checked")
+
+  let adicionalPrice = 0
+
+  adicional.forEach((item) => {
+    itemPrice = Number(item.value)
+    adicionalPrice += itemPrice
+  })
+
+  const total = Number(tamanho.value) + adicionalPrice
+
+  totalPrice.innerHTML = 'R$ ' + total + ',00'
 }

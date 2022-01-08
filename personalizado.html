@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap"
-  rel="stylesheet">
+    rel="stylesheet">
 
   <link rel="stylesheet" href="/styles/reset.css">
   <link rel="stylesheet" href="/styles/main.css">
@@ -18,15 +19,16 @@
 
   <title>Confeitaria Bolos e Cia :: Bolos Personalizados</title>
 </head>
+
 <body>
   <div id="wrapper">
     <main role="main" class="principal">
       <h1 class="titulo">Bolos Personalizados Decorados com Chantininho (Quilo)</h1>
 
       <div class="tp-massas" id="tp-massas">
-        <div class="sub-titulo">        
+        <div class="sub-titulo">
           <h2>
-            <i class="fas fa-chevron-right" ></i>
+            <i class="fas fa-chevron-right"></i>
             Escolha o tipo de massa
           </h2>
         </div>
@@ -39,9 +41,9 @@
       </div>
 
       <div class="tp-tamanhos" id="tp-tamanhos">
-        <div class="sub-titulo" >
+        <div class="sub-titulo">
           <h2>
-            <i class="fas fa-chevron-right" ></i>
+            <i class="fas fa-chevron-right"></i>
             Escolha o tamanho do bolo
           </h2>
         </div>
@@ -88,7 +90,7 @@
       <div class="tp-recheios" id="tp-recheios">
         <div class="sub-titulo">
           <h2>
-            <i class="fas fa-chevron-right" ></i>
+            <i class="fas fa-chevron-right"></i>
             Recheios
           </h2>
           <h3>Escolha até 2 opções</h3>
@@ -101,7 +103,7 @@
           <input type="checkbox" class="input-check -recheio" name="recheio" id="brigadeiro-de-ninho">
           <label for="brigadeiro-de-ninho">Brigadeiro de Ninho</label>
           <input type="checkbox" class="input-check -recheio" name="recheio" id="brigadeiro-tradicional">
-          <label for="brigadeiro-tradicional">Brigadeiro Tradicional</label>        
+          <label for="brigadeiro-tradicional">Brigadeiro Tradicional</label>
           <input type="checkbox" class="input-check -recheio" name="recheio" id="doce-de-leite">
           <label for="doce-de-leite">Doce de Leite</label>
           <input type="checkbox" class="input-check -recheio" name="recheio" id="prestigio">
@@ -112,7 +114,7 @@
       <div class="tp-adicionais" id="tp-adicionais">
         <div class="sub-titulo">
           <h2>
-            <i class="fas fa-chevron-right" ></i>
+            <i class="fas fa-chevron-right"></i>
             Adicione mais sabor ao seu bolo
           </h2>
         </div>
@@ -145,7 +147,8 @@
             </label>
           </div>
           <div class="adicional -label">
-            <input type="checkbox" class="input-check -adicional" value="14" name="adicional" id="chocolate-branco-picado">
+            <input type="checkbox" class="input-check -adicional" value="14" name="adicional"
+              id="chocolate-branco-picado">
             <label for="chocolate-branco-picado">
               <div class="descricao">
                 <p>Chocolate branco picado</p>
@@ -241,7 +244,7 @@
     <section class="informacoes">
       <div class="sub-titulo">
         <h2>
-          <i class="fas fa-chevron-right" ></i>
+          <i class="fas fa-chevron-right"></i>
           Informações importantes
         </h2>
       </div>
@@ -277,24 +280,20 @@
         <i class="far fa-comment-alt"></i>
         Alguma observação?
       </p>
-      <textarea 
-        placeholder="Ex: usar ingrediente especifico"
-        name="observacao"
-        id="observacao"
-        cols="30"
-        rows="3"
-        maxlength="140"
-      ></textarea>
+      <textarea placeholder="Ex: usar ingrediente especifico" name="observacao" id="observacao" cols="32" rows="3"
+        maxlength="140"></textarea>
+      <div class="textarea-counter">0/140</div>
     </section>
   </div>
 
   <footer>
-    <button>
+    <button class="whatsapp">
       <img src="/assets/WhatsApp.svg">
       <span class="preco-total">R$000,00</span>
     </button>
   </footer>
-  
+
   <script src="/scripts/app.js"></script>
 </body>
+
 </html>

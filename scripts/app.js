@@ -96,3 +96,20 @@ function priceUpdate() {
 
   totalPrice.innerHTML = 'R$ ' + total + ',00'
 }
+
+const observacao = document.querySelector('#observacao')
+const textareaCounter = document.querySelector('.textarea-counter')
+
+observacao.addEventListener('input', function (e) {
+  const target = e.target
+
+  const maxLength = target.getAttribute('maxlength');
+
+  const currentLength = target.value.length;
+
+  if (currentLength === 140) {
+    alert('Não se preocupe, você poderá coninuar a observação pelo whatsapp')
+  }
+
+  textareaCounter.innerHTML = `${currentLength}/${maxLength}`;
+})

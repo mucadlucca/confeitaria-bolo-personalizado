@@ -168,10 +168,15 @@ body {
 }
 
 .observacoes > textarea {
-  margin: 0 0 8px 16px;
+  margin: 0 0 0 16px;
   border: 1px solid rgba(128, 128, 128, 0.7);
   border-radius: 4px;
   padding: 8px;
+}
+
+.textarea-counter {
+  margin: 0 0 8px 16px;
+  font-size: 13px;
 }
 
 footer {
